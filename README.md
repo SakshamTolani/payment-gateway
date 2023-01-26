@@ -6,18 +6,54 @@
 - Django 4.1.5
 - Django REST Framework 3.14.0
 
-## Installation
-After you cloned the repository, you want to create a virtual environment, so you have a clean python installation.
-You can do this by running the command
+## Quick Start
+
+- Fork and Clone the repository using-
+```
+git clone https://github.com/diyajaiswal11/Bloggitt.git
+```
+- Create a Branch- 
+```
+git checkout -b <branch_name>
+```
+- Create virtual environment-
 ```
 python -m venv env
+env\Scripts\activate
 ```
-
-After this, it is necessary to activate the virtual environment, you can get more information about this [here](https://docs.python.org/3/tutorial/venv.html)
-
-You can install all the required dependencies by running
+- Install dependencies using-
 ```
 pip install -r requirements.txt
+```
+*If you have python2 and python3 installed you need to specify python3 by using command:*
+```
+python3 -m pip install -r requirements.txt
+```
+
+- Headover to Project Directory- 
+```
+cd bloggitt
+```
+- Make migrations using-
+```
+python manage.py makemigrations
+```
+*If you have python2 and python3 installed you need to specify python3 by using command:*
+```
+python3 manage.py makemigrations
+```
+
+- Migrate Database-
+```
+python manage.py migrate
+```
+- Create a superuser-
+```
+python manage.py createsuperuser
+```
+- Run server using-
+```
+python manage.py runserver
 ```
 
 ## Structure
