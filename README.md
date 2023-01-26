@@ -10,7 +10,7 @@
 
 - Fork and Clone the repository using-
 ```
-git clone https://github.com/diyajaiswal11/Bloggitt.git
+git clone https://github.com/SakshamTolani/payment-gateway
 ```
 - Create a Branch- 
 ```
