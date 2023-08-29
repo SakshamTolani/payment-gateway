@@ -1,7 +1,6 @@
 # PAYMENT GATEWAY WITH DJANGO REST FRAMEWORK
-
 - [Django REST framework](http://www.django-rest-framework.org/) is a powerful and flexible toolkit for building Web APIs.
-- [React.JS](https://legacy.reactjs.org/) is an open-source JavaScript library, used for building user interfaces or UI components
+- [React.JS](https://legacy.reactjs.org/) is an open-source JavaScript library, used for building user interfaces or UI components.
 
 ## Requirements
 - Python 3.9.6
