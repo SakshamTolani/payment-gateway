@@ -1,16 +1,19 @@
 # PAYMENT GATEWAY WITH DJANGO REST FRAMEWORK
 [Django REST framework](http://www.django-rest-framework.org/) is a powerful and flexible toolkit for building Web APIs.
+[React.JS](https://legacy.reactjs.org/) is an open-source JavaScript library, used for building user interfaces or UI components
 
 ## Requirements
 - Python 3.9.6
-- Django 4.1.5
+- Django 4.2.4
 - Django REST Framework 3.14.0
+- React.JS ^18.2.0
+- Chakra UI ^2.8.0
 
 ## Quick Start
 
 - Fork and Clone the repository using-
 ```
-git clone https://github.com/SakshamTolani/payment-gateway
+git clone https://github.com/SakshamTolani/taskux/
 ```
 - Create a Branch- 
 ```
@@ -59,31 +62,34 @@ python manage.py runserver
 ## Structure
 In a RESTful API, endpoints (URLs) define the structure of the API and how end users access data from our application using the HTTP methods - GET, POST, PUT, DELETE. Endpoints should be logically organized around _collections_ and _elements_, both of which are resources.
 
-In our case, we have one single resource, `orders`, so we will use the following URLS - `/api/` and `/api/<order_id>` for collections and elements, respectively:
+In our case, we have one single resource, `tasks`, so we will use the following URLS - `/api/` and `/api/tasks/` for collections and elements, respectively:
 
 Endpoint |HTTP Method | CRUD Method | Result
 -- | -- |-- |--
-`api/` | GET | READ | Get all orders
-`api/:order_id/` | GET | READ | Get order by order-id
-`api/createOrder/`| POST | CREATE | Create a new order
-`api/:order_id/paymentStatus/` | GET | READ | Get Payment Details by order-id
-`api/:order_id/paymentStatus/success/` | PUT | UPDATE | Update payment to success using order-id
-`api/:order_id/paymentStatus/failure/` | PUT | UPDATE | Update payment to failure using order-id
+`api/tasks/` | GET | READ | Get all tasks
+`api/register/` | POST | READ | Signup a user
+`api/tasks/create/`| POST | CREATE | Create a new task
+`api/tasks/:id/` | GET | READ | Get Task Details by id (task id)
+`api/tasks/delete/:id/` | DELETE | READ | Delete Task by id (task id)
+`api/tasks/completed/:id/` | PUT | READ | Mark Task as completed by id (task id)
+`api/tasks/edit/:id/` | PUT | READ | Edit Task by id (task id)
 
 ### Commands
 ```
-Get all orders
-http http://127.0.0.1:8000/api/
-Get order by order-id
-http GET http://127.0.0.1:8000/api/{order_id}/
-Create a new order
-http POST http://127.0.0.1:8000/api/createOrder/ "order_id":"ORD265", "order_amount":2000, "customer_name":"Spiderman"
-Get Payment Details by order-id
-http GET http://127.0.0.1:8000/api/{order_id}/paymentStatus/ 
-Update payment to success using order-id
-http PUT http://127.0.0.1:8000/api/{order_id}/paymentStatus/success/
-Update payment to failure using order-id
-http PUT http://127.0.0.1:8000/api/{order_id}/paymentStatus/failure/ 
+Get all tasks
+http GET http://127.0.0.1:8000/api/tasks/
+Register a new user
+http POST http://127.0.0.1:8000/api/register/
+Create a new task
+http POST http://127.0.0.1:8000/api/tasks/create/ 
+Get task Details by id
+http GET http://127.0.0.1:8000/api/tasks/:id/`
+Delete task using id
+http DELETE http://127.0.0.1:8000/api/tasks/delete/:id/
+Update task to completed using id
+http PUT http://127.0.0.1:8000/api/tasks/completed/:id/
+Edit taskusing id
+http PUT http://127.0.0.1:8000/api/tasks/edit/:id/
 ```
 
 > Made with ❤️ by Saksham Tolani
